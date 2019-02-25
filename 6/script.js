@@ -5,7 +5,7 @@ function frameFirst(arr, sup) {
 
   for (let i = 0; i < arr.length; i++) {
     if (a < arr[i].length) {
-      a = arr[i].length
+      a = arr[i].length;
     }
   }
   longString = sup.repeat(a + 4);
@@ -18,16 +18,16 @@ function frameSecond(arr, sup) {
 
   for (let i = 0; i < arr.length; i++) {
     if (a < arr[i].length) {
-      a = arr[i].length
+      a = arr[i].length;
     }
   }
   for (let i = 0; i < arr.length; i++) {
     let space = a - arr[i].length;
-    arr[i] = arr[i] + ' '.repeat(space)
+    arr[i] = arr[i] + ' '.repeat(space);
   }
   longString = sup.repeat(a + 4);
   console.log(`${longString}\n${arr.map(items => `${sup} ${items} ${sup}`).join('\n')}\n${longString} `);
 }
 
-frameFirst(['Create', 'a', 'frame'], '+')
-frameSecond(['Create', 'a', 'frame'], '+')
+frameFirst(['Create', 'a', 'frame'], '+');
+frameSecond(['Create', 'a', 'frame'], '+');
