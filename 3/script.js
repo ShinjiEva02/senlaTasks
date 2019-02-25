@@ -1,10 +1,11 @@
-let number = document.getElementsByTagName('input')[0],
-  buttonClick = document.querySelector('#clickButton'),
-  arr = [],
-  a = '',
-  p = document.createElement('p');
+const number = document.getElementsByTagName('input')[0];
+const buttonClick = document.querySelector('#clickButton');
+const p = document.createElement('p');
+let arr = [],
+  a = '';
 
-buttonClick.addEventListener('click', function () {
+
+buttonClick.addEventListener('click', function() {
 
   arr = number.value.split(' ');
   a = arr[0].length;
