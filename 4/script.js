@@ -5,4 +5,4 @@ function getDimensionalArray(arr, sup) {
   }
   return ard;
 }
-console.log(getDimensionalArray([0, 1, 2, 3, 4, 5], 3));
+console.log(getDimensionalArray([0, 1, 2, 3, 4, 5], 4));
