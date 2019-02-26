@@ -6,7 +6,7 @@ let arr, shortWord;
 buttonClick.addEventListener('click', function () {
   arr = number.value.split(' ').filter(word => word.length != 0);
   shortWord = arr[0].length;
-  arr.forEach(item => shortWord > item.length ?  shortWord = item.length: console.log(''));
+  arr.forEach(item => shortWord > item.length ?  shortWord = item.length: '');
   p.innerHTML = `The shortest length of the word: ${shortWord}`;
   document.body.appendChild(p);
 });
