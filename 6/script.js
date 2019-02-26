@@ -1,6 +1,5 @@
 function frame(arr, sup) {
-  let longString = '',
-    space,
+  let space,
     longWord = arr[0].length;
 
   for (let i = 0; i < arr.length; i++) {
