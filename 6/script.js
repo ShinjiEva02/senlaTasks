@@ -1,33 +1,18 @@
-// Две функции потому что сомневался в условии, я сделал полноценную рамку и рамку, которая была показана в условии
-function frameFirst(arr, sup) {
+function frame(arr, sup) {
   let longString = '',
-    a = arr[0].length;
+    space,
+    longWord = arr[0].length;
 
   for (let i = 0; i < arr.length; i++) {
-    if (a < arr[i].length) {
-      a = arr[i].length;
+    if (longWord < arr[i].length) {
+      longWord = arr[i].length;
     }
   }
-  longString = sup.repeat(a + 4);
-  console.log(`${longString}\n${arr.map(items => `${sup} ${items} ${sup}`).join('\n')}\n${longString} `);
+  let arw = arr.map((items) => {
+    space = longWord - items.length;
+    return items += ' '.repeat(space)
+  });
+  console.log(`${sup.repeat(longWord + 4)}\n${arw.map(items => `${sup} ${items} ${sup}`).join('\n')}\n${sup.repeat(longWord + 4)} `);
 }
 
-function frameSecond(arr, sup) {
-  let longString = '',
-    a = arr[0].length;
-
-  for (let i = 0; i < arr.length; i++) {
-    if (a < arr[i].length) {
-      a = arr[i].length;
-    }
-  }
-  for (let i = 0; i < arr.length; i++) {
-    let space = a - arr[i].length;
-    arr[i] = arr[i] + ' '.repeat(space);
-  }
-  longString = sup.repeat(a + 4);
-  console.log(`${longString}\n${arr.map(items => `${sup} ${items} ${sup}`).join('\n')}\n${longString} `);
-}
-
-frameFirst(['Create', 'a', 'frame'], '+');
-frameSecond(['Create', 'a', 'frame'], '+');
+frame(['Create', 'a', 'frame'], '+');
