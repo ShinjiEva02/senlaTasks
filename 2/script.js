@@ -20,10 +20,10 @@ buttonClick.addEventListener('click', function() {
 
       for (let j = 0; j < +number.value; j++) {
 
-        let lilDiv = document.createElement('div');
-        lilDiv.classList.add('wraperblock');
-        lilDiv.style.backgroundColor = getRandomColor();
-        wrap.appendChild(lilDiv);
+        let blocks = document.createElement('div');
+        blocks.classList.add('wraperblock');
+        blocks.style.backgroundColor = getRandomColor();
+        wrap.appendChild(blocks);
       }
       const br = document.createElement('br');
       wrap.appendChild(br);
